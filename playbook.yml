@@ -1,0 +1,14 @@
+---
+- hosts: master
+  remote_user: vagrant
+  become: yes
+  become_method: sudo
+  roles:
+    - mesosmaster
+
+- hosts: nodes
+  remote_user: vagrant
+  become: yes
+  become_method: sudo
+  roles:
+      - mesosslave
