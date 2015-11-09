@@ -6,10 +6,9 @@ This will build one master node and one slave node.
 
 This build will pull whatever latest builds that are available in the mesosphere repos for mesos, marathon, chronos and zookeeper and also the latest docker versions that are used to run containers on the mesos slaves.
 
-However, for mesos-dns, this will pull the binary release 0.4.0
+However, for mesos-dns, this will pull the binary release 0.4.0 and will automatically deploy mesos-dns as an application using marathon.
 
 ## Installation
-
 
 Pre-req:
 
