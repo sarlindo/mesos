@@ -14,6 +14,7 @@ Pre-req:
 
 1. Ensure you have vagrant installed
 2. Ensure you have virtualbox installed
+3. Ensure you have ansible installed
 
 Note: This may not work on windows dev machines because I believe the ansible provisioners won't run on windows, but not 100% sure. This should work fine on a mac or linux machine. 
 
