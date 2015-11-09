@@ -1,6 +1,6 @@
-# Mesos - Simple Ubuntu 2 node cluster
+# Mesos - Simple Ubuntu two node cluster
 
-This project automates a simple Ubuntu 14.04 2 node cluster using vagrant and ansible as the provisioner.
+This project automates a simple Ubuntu 14.04 two node cluster using vagrant and ansible as the provisioner.
 
 This will build one master node and one slave node.
 
@@ -37,5 +37,7 @@ Run it:
 ## Usage
 
 URL for mesos will be - http://192.168.33.10:5050
+
 URL for marathon will be - http://192.168.33.10:8080
+
 URL for chronos will be - http://192.168.33.10:4400
