@@ -41,3 +41,5 @@ URL for mesos will be - http://192.168.33.10:5050
 URL for marathon will be - http://192.168.33.10:8080
 
 URL for chronos will be - http://192.168.33.10:4400
+
+All logs will go into /var/log/mesos
