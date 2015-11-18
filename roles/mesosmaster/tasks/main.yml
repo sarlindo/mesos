@@ -16,6 +16,21 @@
 - name: install openjdk
   apt: pkg=openjdk-8-jdk state=latest
 
+- name: add an apt signing key from mit for docker
+  apt_key: keyserver=hkp://pgp.mit.edu:80 id=58118E89F3A912897C070ADBF76221572C52609D
+
+- name: add docker repo
+  apt_repository: repo="deb https://apt.dockerproject.org/repo {{ ansible_distribution|lower }}-{{ ansible_distribution_release }} main" state=present
+
+- name: install docker
+  apt: pkg=docker-engine
+
+- name: add docker to list of containerizers
+  lineinfile: dest=/etc/mesos-slave/containerizers create=yes line="docker,mesos"
+
+- name: increase mesos timeout for large containers
+  lineinfile: dest=/etc/mesos-slave/executor_registration_timeout create=yes line="5mins"
+
 - name: install mesosphere (includes zookeeper, mesos, marathon and chronos)
   apt: pkg=mesosphere
 
